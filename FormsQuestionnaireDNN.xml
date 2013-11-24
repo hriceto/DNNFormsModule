@@ -1,0 +1,784 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FormsQuestionnaireDNN</name>
+    </assembly>
+    <members>
+        <member name="T:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.FormsQuestionnaireDNNModuleBase">
+            <summary>
+            This base class can be used to define custom properties for multiple controls. 
+            An example module, DNNSimpleArticle (http://dnnsimplearticle.codeplex.com) uses this for an ArticleId
+            
+            Because the class inherits from PortalModuleBase, properties like ModuleId, TabId, UserId, and others, 
+            are accessible to your module's controls (that inherity from FormsQuestionnaireDNNModuleBase
+            
+            </summary>
+        </member>
+        <member name="T:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.View">
+            -----------------------------------------------------------------------------
+            <summary>
+            The View class displays the content
+            
+            Typically your view control would be used to display content or functionality in your module.
+            
+            View may be the only control you have in your project depending on the complexity of your module
+            
+            Because the control inherits from FormsQuestionnaireDNNModuleBase you have access to any custom properties
+            defined there, as well as properties from DNN such as PortalId, ModuleId, TabId, UserId and many more.
+            
+            </summary>
+            -----------------------------------------------------------------------------
+        </member>
+        <member name="M:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.View.Page_Load(System.Object,System.EventArgs)">
+            -----------------------------------------------------------------------------
+            <summary>
+            Page_Load runs when the control is loaded
+            </summary>
+            -----------------------------------------------------------------------------
+        </member>
+        <member name="F:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.View.btnGenerateForm">
+            <summary>
+            btnGenerateForm control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="T:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.FormsQuestionnaireDNNSettingsBase">
+            <summary>
+            This base class can be used to define custom properties for multiple controls. 
+            An example module, DNNSimpleArticle (http://dnnsimplearticle.codeplex.com) uses this for an ArticleId
+            
+            Because the class inherits from SettingsModuleBase, properties like ModuleId, TabId, UserId, and others, 
+            are accessible to your module's controls (that inherity from FormsQuestionnaireDNNSettingsBase
+            
+            </summary>
+        </member>
+        <member name="T:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Settings">
+            -----------------------------------------------------------------------------
+            <summary>
+            The Settings class manages Module Settings
+            
+            Typically your settings control would be used to manage settings for your module.
+            There are two types of settings, ModuleSettings, and TabModuleSettings.
+            
+            ModuleSettings apply to all "copies" of a module on a site, no matter which page the module is on. 
+            
+            TabModuleSettings apply only to the current module on the current page, if you copy that module to
+            another page the settings are not transferred.
+            
+            If you happen to save both TabModuleSettings and ModuleSettings, TabModuleSettings overrides ModuleSettings.
+            
+            Below we have some examples of how to access these settings but you will need to uncomment to use.
+            
+            Because the control inherits from FormsQuestionnaireDNNSettingsBase you have access to any custom properties
+            defined there, as well as properties from DNN such as PortalId, ModuleId, TabId, UserId and many more.
+            </summary>
+            -----------------------------------------------------------------------------
+        </member>
+        <member name="F:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Settings.lblForm">
+            <summary>
+            lblForm control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Settings.ddlForm">
+            <summary>
+            ddlForm control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="M:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Settings.LoadSettings">
+            -----------------------------------------------------------------------------
+            <summary>
+            LoadSettings loads the settings from the Database and displays them
+            </summary>
+            -----------------------------------------------------------------------------
+        </member>
+        <member name="M:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Settings.UpdateSettings">
+            -----------------------------------------------------------------------------
+            <summary>
+            UpdateSettings saves the modified settings to the Database
+            </summary>
+            -----------------------------------------------------------------------------
+        </member>
+        <member name="T:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormPage">
+            <summary>
+            There are no comments for HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormPage in the schema.
+            </summary>
+            <KeyProperties>
+            FormPageID
+            </KeyProperties>
+        </member>
+        <member name="M:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormPage.CreateFQDNN_FormPage(System.Int32,System.Guid,System.String,System.Int32,System.String)">
+            <summary>
+            Create a new FQDNN_FormPage object.
+            </summary>
+            <param name="formPageID">Initial value of FormPageID.</param>
+            <param name="formPageGUID">Initial value of FormPageGUID.</param>
+            <param name="name">Initial value of Name.</param>
+            <param name="pageNumber">Initial value of PageNumber.</param>
+            <param name="pageRule">Initial value of PageRule.</param>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormPage.FormPageID">
+            <summary>
+            There are no comments for property FormPageID in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormPage.FormPageGUID">
+            <summary>
+            There are no comments for property FormPageGUID in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormPage.Name">
+            <summary>
+            There are no comments for property Name in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormPage.PageNumber">
+            <summary>
+            There are no comments for property PageNumber in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormPage.PageRule">
+            <summary>
+            There are no comments for property PageRule in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormPage.FQDNN_Form">
+            <summary>
+            There are no comments for FQDNN_Form in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormPage.FQDNN_FormReference">
+            <summary>
+            There are no comments for FQDNN_Form in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormPage.FQDNN_FormControl">
+            <summary>
+            There are no comments for FQDNN_FormControl in the schema.
+            </summary>
+        </member>
+        <member name="T:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormControl">
+            <summary>
+            There are no comments for HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormControl in the schema.
+            </summary>
+            <KeyProperties>
+            FormControlID
+            </KeyProperties>
+        </member>
+        <member name="M:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormControl.CreateFQDNN_FormControl(System.Int32,System.Guid,System.String,System.Boolean,System.String,System.String,System.String,System.String,System.String,System.Int32,System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Create a new FQDNN_FormControl object.
+            </summary>
+            <param name="formControlID">Initial value of FormControlID.</param>
+            <param name="formControlGUID">Initial value of FormControlGUID.</param>
+            <param name="name">Initial value of Name.</param>
+            <param name="required">Initial value of Required.</param>
+            <param name="requiredError">Initial value of RequiredError.</param>
+            <param name="regularExpression">Initial value of RegularExpression.</param>
+            <param name="regularExpressionError">Initial value of RegularExpressionError.</param>
+            <param name="defaultValue">Initial value of DefaultValue.</param>
+            <param name="controlRule">Initial value of ControlRule.</param>
+            <param name="dataSourceType">Initial value of DataSourceType.</param>
+            <param name="dynamicDataSource">Initial value of DynamicDataSource.</param>
+            <param name="column">Initial value of Column.</param>
+            <param name="row">Initial value of Row.</param>
+            <param name="controlNumber">Initial value of ControlNumber.</param>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormControl.FormControlID">
+            <summary>
+            There are no comments for property FormControlID in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormControl.FormControlGUID">
+            <summary>
+            There are no comments for property FormControlGUID in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormControl.Name">
+            <summary>
+            There are no comments for property Name in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormControl.Required">
+            <summary>
+            There are no comments for property Required in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormControl.RequiredError">
+            <summary>
+            There are no comments for property RequiredError in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormControl.RegularExpression">
+            <summary>
+            There are no comments for property RegularExpression in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormControl.RegularExpressionError">
+            <summary>
+            There are no comments for property RegularExpressionError in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormControl.DefaultValue">
+            <summary>
+            There are no comments for property DefaultValue in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormControl.ControlRule">
+            <summary>
+            There are no comments for property ControlRule in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormControl.DataSourceType">
+            <summary>
+            There are no comments for property DataSourceType in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormControl.DynamicDataSource">
+            <summary>
+            There are no comments for property DynamicDataSource in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormControl.Column">
+            <summary>
+            There are no comments for property Column in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormControl.Row">
+            <summary>
+            There are no comments for property Row in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormControl.ControlNumber">
+            <summary>
+            There are no comments for property ControlNumber in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormControl.FQDNN_ControlDefinition">
+            <summary>
+            There are no comments for FQDNN_ControlDefinition in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormControl.FQDNN_ControlDefinitionReference">
+            <summary>
+            There are no comments for FQDNN_ControlDefinition in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormControl.FQDNN_FormPage">
+            <summary>
+            There are no comments for FQDNN_FormPage in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormControl.FQDNN_FormPageReference">
+            <summary>
+            There are no comments for FQDNN_FormPage in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormControl.FQDNN_FormControlValue">
+            <summary>
+            There are no comments for FQDNN_FormControlValue in the schema.
+            </summary>
+        </member>
+        <member name="T:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Edit">
+            -----------------------------------------------------------------------------
+            <summary>
+            The EditFormsQuestionnaireDNN class is used to manage content
+            
+            Typically your edit control would be used to create new content, or edit existing content within your module.
+            The ControlKey for this control is "Edit", and is defined in the manifest (.dnn) file.
+            
+            Because the control inherits from PortalModuleBase you have access to any custom properties
+            defined there, as well as properties from DNN such as PortalId, ModuleId, TabId, UserId and many more.
+            
+            </summary>
+            -----------------------------------------------------------------------------
+            <summary>
+            EditFormsQuestionnaireDNN class.
+            </summary>
+            <remarks>
+            Auto-generated class.
+            </remarks>
+        </member>
+        <member name="M:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Edit.Page_Load(System.Object,System.EventArgs)">
+            -----------------------------------------------------------------------------
+            <summary>
+            Page_Load runs when the control is loaded
+            </summary>
+            -----------------------------------------------------------------------------
+        </member>
+        <member name="T:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_Form">
+            <summary>
+            There are no comments for HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_Form in the schema.
+            </summary>
+            <KeyProperties>
+            FormID
+            </KeyProperties>
+        </member>
+        <member name="M:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_Form.CreateFQDNN_Form(System.Int32,System.Guid,System.String,System.String,System.Int32,System.Boolean,System.Boolean)">
+            <summary>
+            Create a new FQDNN_Form object.
+            </summary>
+            <param name="formID">Initial value of FormID.</param>
+            <param name="formGUID">Initial value of FormGUID.</param>
+            <param name="name">Initial value of Name.</param>
+            <param name="locale">Initial value of Locale.</param>
+            <param name="portalID">Initial value of PortalID.</param>
+            <param name="active">Initial value of Active.</param>
+            <param name="deleted">Initial value of Deleted.</param>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_Form.FormID">
+            <summary>
+            There are no comments for property FormID in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_Form.FormGUID">
+            <summary>
+            There are no comments for property FormGUID in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_Form.Name">
+            <summary>
+            There are no comments for property Name in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_Form.Locale">
+            <summary>
+            There are no comments for property Locale in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_Form.PortalID">
+            <summary>
+            There are no comments for property PortalID in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_Form.Active">
+            <summary>
+            There are no comments for property Active in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_Form.Deleted">
+            <summary>
+            There are no comments for property Deleted in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_Form.ActiveFrom">
+            <summary>
+            There are no comments for property ActiveFrom in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_Form.ActiveTo">
+            <summary>
+            There are no comments for property ActiveTo in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_Form.CreatedBy">
+            <summary>
+            There are no comments for property CreatedBy in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_Form.CreatedOn">
+            <summary>
+            There are no comments for property CreatedOn in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_Form.LastEditBy">
+            <summary>
+            There are no comments for property LastEditBy in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_Form.LastEditOn">
+            <summary>
+            There are no comments for property LastEditOn in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_Form.FormTemplate">
+            <summary>
+            There are no comments for property FormTemplate in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_Form.FQDNN_FormFiling">
+            <summary>
+            There are no comments for FQDNN_FormFiling in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_Form.FQDNN_FormPage">
+            <summary>
+            There are no comments for FQDNN_FormPage in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_Form.FQDNN_FormSetting">
+            <summary>
+            There are no comments for FQDNN_FormSetting in the schema.
+            </summary>
+        </member>
+        <member name="T:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNNEntities">
+            <summary>
+            There are no comments for FQDNNEntities in the schema.
+            </summary>
+        </member>
+        <member name="M:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNNEntities.#ctor">
+            <summary>
+            Initializes a new FQDNNEntities object using the connection string found in the 'FQDNNEntities' section of the application configuration file.
+            </summary>
+        </member>
+        <member name="M:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNNEntities.#ctor(System.String)">
+            <summary>
+            Initialize a new FQDNNEntities object.
+            </summary>
+        </member>
+        <member name="M:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNNEntities.#ctor(System.Data.EntityClient.EntityConnection)">
+            <summary>
+            Initialize a new FQDNNEntities object.
+            </summary>
+        </member>
+        <member name="M:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNNEntities.AddToFQDNN_ControlDefinition(HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_ControlDefinition)">
+            <summary>
+            There are no comments for FQDNN_ControlDefinition in the schema.
+            </summary>
+        </member>
+        <member name="M:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNNEntities.AddToFQDNN_Form(HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_Form)">
+            <summary>
+            There are no comments for FQDNN_Form in the schema.
+            </summary>
+        </member>
+        <member name="M:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNNEntities.AddToFQDNN_FormControl(HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormControl)">
+            <summary>
+            There are no comments for FQDNN_FormControl in the schema.
+            </summary>
+        </member>
+        <member name="M:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNNEntities.AddToFQDNN_FormControlValue(HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormControlValue)">
+            <summary>
+            There are no comments for FQDNN_FormControlValue in the schema.
+            </summary>
+        </member>
+        <member name="M:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNNEntities.AddToFQDNN_FormFiling(HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormFiling)">
+            <summary>
+            There are no comments for FQDNN_FormFiling in the schema.
+            </summary>
+        </member>
+        <member name="M:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNNEntities.AddToFQDNN_FormFilingRecord(HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormFilingRecord)">
+            <summary>
+            There are no comments for FQDNN_FormFilingRecord in the schema.
+            </summary>
+        </member>
+        <member name="M:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNNEntities.AddToFQDNN_FormPage(HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormPage)">
+            <summary>
+            There are no comments for FQDNN_FormPage in the schema.
+            </summary>
+        </member>
+        <member name="M:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNNEntities.AddToFQDNN_FormSetting(HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormSetting)">
+            <summary>
+            There are no comments for FQDNN_FormSetting in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNNEntities.FQDNN_ControlDefinition">
+            <summary>
+            There are no comments for FQDNN_ControlDefinition in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNNEntities.FQDNN_Form">
+            <summary>
+            There are no comments for FQDNN_Form in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNNEntities.FQDNN_FormControl">
+            <summary>
+            There are no comments for FQDNN_FormControl in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNNEntities.FQDNN_FormControlValue">
+            <summary>
+            There are no comments for FQDNN_FormControlValue in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNNEntities.FQDNN_FormFiling">
+            <summary>
+            There are no comments for FQDNN_FormFiling in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNNEntities.FQDNN_FormFilingRecord">
+            <summary>
+            There are no comments for FQDNN_FormFilingRecord in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNNEntities.FQDNN_FormPage">
+            <summary>
+            There are no comments for FQDNN_FormPage in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNNEntities.FQDNN_FormSetting">
+            <summary>
+            There are no comments for FQDNN_FormSetting in the schema.
+            </summary>
+        </member>
+        <member name="T:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_ControlDefinition">
+            <summary>
+            There are no comments for HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_ControlDefinition in the schema.
+            </summary>
+            <KeyProperties>
+            ControlDefinitionID
+            </KeyProperties>
+        </member>
+        <member name="M:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_ControlDefinition.CreateFQDNN_ControlDefinition(System.Int32,System.String,System.String,System.String)">
+            <summary>
+            Create a new FQDNN_ControlDefinition object.
+            </summary>
+            <param name="controlDefinitionID">Initial value of ControlDefinitionID.</param>
+            <param name="class">Initial value of Class.</param>
+            <param name="markup">Initial value of Markup.</param>
+            <param name="valuePropertyName">Initial value of ValuePropertyName.</param>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_ControlDefinition.ControlDefinitionID">
+            <summary>
+            There are no comments for property ControlDefinitionID in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_ControlDefinition.Class">
+            <summary>
+            There are no comments for property Class in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_ControlDefinition.Markup">
+            <summary>
+            There are no comments for property Markup in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_ControlDefinition.ValuePropertyName">
+            <summary>
+            There are no comments for property ValuePropertyName in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_ControlDefinition.FQDNN_FormControl">
+            <summary>
+            There are no comments for FQDNN_FormControl in the schema.
+            </summary>
+        </member>
+        <member name="T:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormControlValue">
+            <summary>
+            There are no comments for HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormControlValue in the schema.
+            </summary>
+            <KeyProperties>
+            FormControlValueID
+            </KeyProperties>
+        </member>
+        <member name="M:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormControlValue.CreateFQDNN_FormControlValue(System.Int32,System.Guid,System.String,System.String,System.Boolean)">
+            <summary>
+            Create a new FQDNN_FormControlValue object.
+            </summary>
+            <param name="formControlValueID">Initial value of FormControlValueID.</param>
+            <param name="formControlValueGUID">Initial value of FormControlValueGUID.</param>
+            <param name="text">Initial value of Text.</param>
+            <param name="value">Initial value of Value.</param>
+            <param name="selected">Initial value of Selected.</param>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormControlValue.FormControlValueID">
+            <summary>
+            There are no comments for property FormControlValueID in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormControlValue.FormControlValueGUID">
+            <summary>
+            There are no comments for property FormControlValueGUID in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormControlValue.Text">
+            <summary>
+            There are no comments for property Text in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormControlValue.Value">
+            <summary>
+            There are no comments for property Value in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormControlValue.Selected">
+            <summary>
+            There are no comments for property Selected in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormControlValue.FQDNN_FormControl">
+            <summary>
+            There are no comments for FQDNN_FormControl in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormControlValue.FQDNN_FormControlReference">
+            <summary>
+            There are no comments for FQDNN_FormControl in the schema.
+            </summary>
+        </member>
+        <member name="T:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormFiling">
+            <summary>
+            There are no comments for HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormFiling in the schema.
+            </summary>
+            <KeyProperties>
+            FormFilingID
+            </KeyProperties>
+        </member>
+        <member name="M:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormFiling.CreateFQDNN_FormFiling(System.Int32,System.Int32,System.DateTime,System.Boolean)">
+            <summary>
+            Create a new FQDNN_FormFiling object.
+            </summary>
+            <param name="formFilingID">Initial value of FormFilingID.</param>
+            <param name="userID">Initial value of UserID.</param>
+            <param name="dateCreated">Initial value of DateCreated.</param>
+            <param name="isComplete">Initial value of IsComplete.</param>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormFiling.FormFilingID">
+            <summary>
+            There are no comments for property FormFilingID in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormFiling.UserID">
+            <summary>
+            There are no comments for property UserID in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormFiling.UniqueUserString">
+            <summary>
+            There are no comments for property UniqueUserString in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormFiling.IPAddress">
+            <summary>
+            There are no comments for property IPAddress in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormFiling.Browser">
+            <summary>
+            There are no comments for property Browser in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormFiling.Platform">
+            <summary>
+            There are no comments for property Platform in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormFiling.DateCreated">
+            <summary>
+            There are no comments for property DateCreated in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormFiling.DateUpdated">
+            <summary>
+            There are no comments for property DateUpdated in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormFiling.IsComplete">
+            <summary>
+            There are no comments for property IsComplete in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormFiling.FQDNN_Form">
+            <summary>
+            There are no comments for FQDNN_Form in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormFiling.FQDNN_FormReference">
+            <summary>
+            There are no comments for FQDNN_Form in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormFiling.FQDNN_FormFilingRecord">
+            <summary>
+            There are no comments for FQDNN_FormFilingRecord in the schema.
+            </summary>
+        </member>
+        <member name="T:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormFilingRecord">
+            <summary>
+            There are no comments for HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormFilingRecord in the schema.
+            </summary>
+            <KeyProperties>
+            FormFilingRecordID
+            </KeyProperties>
+        </member>
+        <member name="M:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormFilingRecord.CreateFQDNN_FormFilingRecord(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Create a new FQDNN_FormFilingRecord object.
+            </summary>
+            <param name="formFilingRecordID">Initial value of FormFilingRecordID.</param>
+            <param name="formPageID">Initial value of FormPageID.</param>
+            <param name="formControlID">Initial value of FormControlID.</param>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormFilingRecord.FormFilingRecordID">
+            <summary>
+            There are no comments for property FormFilingRecordID in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormFilingRecord.FormPageID">
+            <summary>
+            There are no comments for property FormPageID in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormFilingRecord.FormControlID">
+            <summary>
+            There are no comments for property FormControlID in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormFilingRecord.Value">
+            <summary>
+            There are no comments for property Value in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormFilingRecord.FQDNN_FormFiling">
+            <summary>
+            There are no comments for FQDNN_FormFiling in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormFilingRecord.FQDNN_FormFilingReference">
+            <summary>
+            There are no comments for FQDNN_FormFiling in the schema.
+            </summary>
+        </member>
+        <member name="T:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormSetting">
+            <summary>
+            There are no comments for HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormSetting in the schema.
+            </summary>
+            <KeyProperties>
+            FormSettingID
+            </KeyProperties>
+        </member>
+        <member name="M:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormSetting.CreateFQDNN_FormSetting(System.Int32,System.String,System.String)">
+            <summary>
+            Create a new FQDNN_FormSetting object.
+            </summary>
+            <param name="formSettingID">Initial value of FormSettingID.</param>
+            <param name="settingKey">Initial value of SettingKey.</param>
+            <param name="settingValue">Initial value of SettingValue.</param>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormSetting.FormSettingID">
+            <summary>
+            There are no comments for property FormSettingID in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormSetting.SettingKey">
+            <summary>
+            There are no comments for property SettingKey in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormSetting.SettingValue">
+            <summary>
+            There are no comments for property SettingValue in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormSetting.FQDNN_Form">
+            <summary>
+            There are no comments for FQDNN_Form in the schema.
+            </summary>
+        </member>
+        <member name="P:HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.FQDNN_FormSetting.FQDNN_FormReference">
+            <summary>
+            There are no comments for FQDNN_Form in the schema.
+            </summary>
+        </member>
+    </members>
+</doc>
