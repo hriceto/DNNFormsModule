@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+  <EntityContainer Name="HristoEvtimovDNNModulesFormsQuestionnaireDNNDataStoreContainer">
+    <EntitySet Name="FQDNN_ControlDefinition" EntityType="HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.Store.FQDNN_ControlDefinition" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FQDNN_Form" EntityType="HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.Store.FQDNN_Form" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FQDNN_FormControl" EntityType="HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.Store.FQDNN_FormControl" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FQDNN_FormControlValue" EntityType="HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.Store.FQDNN_FormControlValue" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FQDNN_FormFiling" EntityType="HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.Store.FQDNN_FormFiling" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FQDNN_FormFilingRecord" EntityType="HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.Store.FQDNN_FormFilingRecord" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FQDNN_FormPage" EntityType="HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.Store.FQDNN_FormPage" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FQDNN_FormSetting" EntityType="HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.Store.FQDNN_FormSetting" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_FQDNN_FormControl_FQDNN_ControlDefinition" Association="HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.Store.FK_FQDNN_FormControl_FQDNN_ControlDefinition">
+      <End Role="FQDNN_ControlDefinition" EntitySet="FQDNN_ControlDefinition" />
+      <End Role="FQDNN_FormControl" EntitySet="FQDNN_FormControl" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FQDNN_FormControl_FQDNN_FormPage" Association="HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.Store.FK_FQDNN_FormControl_FQDNN_FormPage">
+      <End Role="FQDNN_FormPage" EntitySet="FQDNN_FormPage" />
+      <End Role="FQDNN_FormControl" EntitySet="FQDNN_FormControl" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FQDNN_FormControlValue_FQDNN_FormControl" Association="HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.Store.FK_FQDNN_FormControlValue_FQDNN_FormControl">
+      <End Role="FQDNN_FormControl" EntitySet="FQDNN_FormControl" />
+      <End Role="FQDNN_FormControlValue" EntitySet="FQDNN_FormControlValue" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FQDNN_FormFiling_FQDNN_Form" Association="HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.Store.FK_FQDNN_FormFiling_FQDNN_Form">
+      <End Role="FQDNN_Form" EntitySet="FQDNN_Form" />
+      <End Role="FQDNN_FormFiling" EntitySet="FQDNN_FormFiling" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FQDNN_FormFilingRecord_FQDNN_FormFiling" Association="HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.Store.FK_FQDNN_FormFilingRecord_FQDNN_FormFiling">
+      <End Role="FQDNN_FormFiling" EntitySet="FQDNN_FormFiling" />
+      <End Role="FQDNN_FormFilingRecord" EntitySet="FQDNN_FormFilingRecord" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FQDNN_FormPage_FQDNN_Form" Association="HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.Store.FK_FQDNN_FormPage_FQDNN_Form">
+      <End Role="FQDNN_Form" EntitySet="FQDNN_Form" />
+      <End Role="FQDNN_FormPage" EntitySet="FQDNN_FormPage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FQDNN_FormSetting_FQDNN_Form" Association="HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.Store.FK_FQDNN_FormSetting_FQDNN_Form">
+      <End Role="FQDNN_Form" EntitySet="FQDNN_Form" />
+      <End Role="FQDNN_FormSetting" EntitySet="FQDNN_FormSetting" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="FQDNN_ControlDefinition">
+    <Key>
+      <PropertyRef Name="ControlDefinitionID" />
+    </Key>
+    <Property Name="ControlDefinitionID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Class" Type="nvarchar" Nullable="false" MaxLength="2000" />
+    <Property Name="Markup" Type="nvarchar" Nullable="false" MaxLength="2000" />
+    <Property Name="ValuePropertyName" Type="nvarchar" Nullable="false" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="FQDNN_Form">
+    <Key>
+      <PropertyRef Name="FormID" />
+    </Key>
+    <Property Name="FormID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FormGUID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="Locale" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="PortalID" Type="int" Nullable="false" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+    <Property Name="Deleted" Type="bit" Nullable="false" />
+    <Property Name="ActiveFrom" Type="date" />
+    <Property Name="ActiveTo" Type="date" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedOn" Type="date" />
+    <Property Name="LastEditBy" Type="int" />
+    <Property Name="LastEditOn" Type="date" />
+    <Property Name="FormTemplate" Type="nvarchar" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="FQDNN_FormControl">
+    <Key>
+      <PropertyRef Name="FormControlID" />
+    </Key>
+    <Property Name="FormControlID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FormControlGUID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="FormPageID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="Required" Type="bit" Nullable="false" />
+    <Property Name="RequiredError" Type="nvarchar" Nullable="false" MaxLength="2000" />
+    <Property Name="RegularExpression" Type="nvarchar" Nullable="false" MaxLength="2000" />
+    <Property Name="RegularExpressionError" Type="nvarchar" Nullable="false" MaxLength="2000" />
+    <Property Name="DefaultValue" Type="nvarchar" Nullable="false" MaxLength="2000" />
+    <Property Name="ControlRule" Type="nvarchar" Nullable="false" MaxLength="2000" />
+    <Property Name="DataSourceType" Type="int" Nullable="false" />
+    <Property Name="DynamicDataSource" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Column" Type="int" Nullable="false" />
+    <Property Name="Row" Type="int" Nullable="false" />
+    <Property Name="ControlNumber" Type="int" Nullable="false" />
+    <Property Name="ControlDefinitionID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FQDNN_FormControlValue">
+    <Key>
+      <PropertyRef Name="FormControlValueID" />
+    </Key>
+    <Property Name="FormControlValueID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FormControlValueGUID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="FormControlID" Type="int" Nullable="false" />
+    <Property Name="Text" Type="nvarchar" Nullable="false" MaxLength="2000" />
+    <Property Name="Value" Type="nvarchar" Nullable="false" MaxLength="2000" />
+    <Property Name="Selected" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FQDNN_FormFiling">
+    <Key>
+      <PropertyRef Name="FormFilingID" />
+    </Key>
+    <Property Name="FormFilingID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FormID" Type="int" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="UniqueUserString" Type="nvarchar" MaxLength="256" />
+    <Property Name="IPAddress" Type="nvarchar" MaxLength="20" />
+    <Property Name="Browser" Type="nvarchar" MaxLength="256" />
+    <Property Name="Platform" Type="nvarchar" MaxLength="256" />
+    <Property Name="DateCreated" Type="date" Nullable="false" />
+    <Property Name="DateUpdated" Type="date" />
+    <Property Name="IsComplete" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FQDNN_FormFilingRecord">
+    <Key>
+      <PropertyRef Name="FormFilingRecordID" />
+    </Key>
+    <Property Name="FormFilingRecordID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FormFilingID" Type="int" Nullable="false" />
+    <Property Name="FormPageID" Type="int" Nullable="false" />
+    <Property Name="FormControlID" Type="int" Nullable="false" />
+    <Property Name="Value" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="FQDNN_FormPage">
+    <Key>
+      <PropertyRef Name="FormPageID" />
+    </Key>
+    <Property Name="FormPageID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FormPageGUID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="FormID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="PageNumber" Type="int" Nullable="false" />
+    <Property Name="PageRule" Type="nvarchar" Nullable="false" MaxLength="2000" />
+  </EntityType>
+  <EntityType Name="FQDNN_FormSetting">
+    <Key>
+      <PropertyRef Name="FormSettingID" />
+    </Key>
+    <Property Name="FormSettingID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FormID" Type="int" Nullable="false" />
+    <Property Name="SettingKey" Type="nvarchar" Nullable="false" MaxLength="200" />
+    <Property Name="SettingValue" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_FQDNN_FormControl_FQDNN_ControlDefinition">
+    <End Role="FQDNN_ControlDefinition" Type="HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.Store.FQDNN_ControlDefinition" Multiplicity="1" />
+    <End Role="FQDNN_FormControl" Type="HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.Store.FQDNN_FormControl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FQDNN_ControlDefinition">
+        <PropertyRef Name="ControlDefinitionID" />
+      </Principal>
+      <Dependent Role="FQDNN_FormControl">
+        <PropertyRef Name="ControlDefinitionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FQDNN_FormControl_FQDNN_FormPage">
+    <End Role="FQDNN_FormPage" Type="HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.Store.FQDNN_FormPage" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="FQDNN_FormControl" Type="HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.Store.FQDNN_FormControl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FQDNN_FormPage">
+        <PropertyRef Name="FormPageID" />
+      </Principal>
+      <Dependent Role="FQDNN_FormControl">
+        <PropertyRef Name="FormPageID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FQDNN_FormControlValue_FQDNN_FormControl">
+    <End Role="FQDNN_FormControl" Type="HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.Store.FQDNN_FormControl" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="FQDNN_FormControlValue" Type="HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.Store.FQDNN_FormControlValue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FQDNN_FormControl">
+        <PropertyRef Name="FormControlID" />
+      </Principal>
+      <Dependent Role="FQDNN_FormControlValue">
+        <PropertyRef Name="FormControlID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FQDNN_FormFiling_FQDNN_Form">
+    <End Role="FQDNN_Form" Type="HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.Store.FQDNN_Form" Multiplicity="1" />
+    <End Role="FQDNN_FormFiling" Type="HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.Store.FQDNN_FormFiling" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FQDNN_Form">
+        <PropertyRef Name="FormID" />
+      </Principal>
+      <Dependent Role="FQDNN_FormFiling">
+        <PropertyRef Name="FormID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FQDNN_FormFilingRecord_FQDNN_FormFiling">
+    <End Role="FQDNN_FormFiling" Type="HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.Store.FQDNN_FormFiling" Multiplicity="1" />
+    <End Role="FQDNN_FormFilingRecord" Type="HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.Store.FQDNN_FormFilingRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FQDNN_FormFiling">
+        <PropertyRef Name="FormFilingID" />
+      </Principal>
+      <Dependent Role="FQDNN_FormFilingRecord">
+        <PropertyRef Name="FormFilingID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FQDNN_FormPage_FQDNN_Form">
+    <End Role="FQDNN_Form" Type="HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.Store.FQDNN_Form" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="FQDNN_FormPage" Type="HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.Store.FQDNN_FormPage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FQDNN_Form">
+        <PropertyRef Name="FormID" />
+      </Principal>
+      <Dependent Role="FQDNN_FormPage">
+        <PropertyRef Name="FormID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FQDNN_FormSetting_FQDNN_Form">
+    <End Role="FQDNN_Form" Type="HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.Store.FQDNN_Form" Multiplicity="1" />
+    <End Role="FQDNN_FormSetting" Type="HristoEvtimov.DNN.Modules.FormsQuestionnaireDNN.Data.Store.FQDNN_FormSetting" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FQDNN_Form">
+        <PropertyRef Name="FormID" />
+      </Principal>
+      <Dependent Role="FQDNN_FormSetting">
+        <PropertyRef Name="FormID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,6 @@
+C:\DEVELOPMENT\DOTNETNUKE\FormsModule\Forms and Questionnaire Module for DNN\Development\website\DesktopModules\FormsQuestionnaireDNN\obj\Debug\ResolveAssemblyReference.cache
+C:\DEVELOPMENT\DOTNETNUKE\FormsModule\Forms and Questionnaire Module for DNN\Development\website\bin\FormsQuestionnaireDNN.dll
+C:\DEVELOPMENT\DOTNETNUKE\FormsModule\Forms and Questionnaire Module for DNN\Development\website\bin\FormsQuestionnaireDNN.pdb
+C:\DEVELOPMENT\DOTNETNUKE\FormsModule\Forms and Questionnaire Module for DNN\Development\website\bin\FormsQuestionnaireDNN.xml
+C:\DEVELOPMENT\DOTNETNUKE\FormsModule\Forms and Questionnaire Module for DNN\Development\website\DesktopModules\FormsQuestionnaireDNN\obj\Debug\FormsQuestionnaireDNN.dll
+C:\DEVELOPMENT\DOTNETNUKE\FormsModule\Forms and Questionnaire Module for DNN\Development\website\DesktopModules\FormsQuestionnaireDNN\obj\Debug\FormsQuestionnaireDNN.pdb
